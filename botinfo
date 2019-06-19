@@ -1,0 +1,12 @@
+if(cmd == `${prefix}botinfo`){
+
+    let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setDescription("Boti informatsioon")
+    .setColor("#42a1f4")
+    .setThumbnail(bicon)
+    .addField("Boti nimi", bot.user.username)
+    .addField("Loodud", bot.user.createdAt)
+
+    return message.channel.send(botembed);
+}
